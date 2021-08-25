@@ -4,7 +4,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ecf0f5;
-
   font-family: "Poppins", sans-serif;
 }
 h1 {
@@ -57,9 +56,10 @@ form {
   width: 280px;
   border-radius: 10px;
   box-shadow: 13px 13px 20px #a4a5a7, -13px -13px 20px #d7e9f7;
+  transition: 1s;
 }
 .anime-group:hover {
-  transition: all 0.5s;
+  transform: scale(1.2);
 }
 .anime-group img {
   height: 200px;
