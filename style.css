@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ecf0f5;
+
   font-family: "Poppins", sans-serif;
 }
 h1 {
@@ -13,6 +14,10 @@ h1 {
 }
 form {
   margin: 0 32%;
+}
+#search-title {
+  text-align: center;
+  text-shadow: 2px 2px 2px #24ccb6;
 }
 /*----------Search box part---------*/
 .search-box input {
@@ -91,9 +96,8 @@ form {
     width: 280px;
   }
   .search-box button {
-    width: 80px;
+    width: 90px;
     font-size: 0.9rem;
-    padding: 10px;
   }
   #output {
     gap: 2rem;
