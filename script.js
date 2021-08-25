@@ -18,10 +18,28 @@ async function topAnime() {
     `https://api.jikan.moe/v3/top/anime/1/bypopularity`
   );
   const topanime_data = await response.json();
-  topanime_data.top.forEach((anime) => createAnime(anime));
-  console.log(createAnime(anime));
+  topanime_data.top.forEach((anime) => createtopAnime(anime));
 }
 topAnime();
+
+// function to create TopAnime list
+// Date format(mm-yyyy)
+function createtopAnime(anime) {
+  const searchResults = document.createElement("div");
+  searchResults.setAttribute("class", "anime-group");
+  searchResults.innerHTML = ` 
+          <h4>${anime.title}</h4>
+      <img src=${anime.image_url} >
+      <p>Episodes : ${anime.episodes}</p>
+      <p>Start Date: ${anime.start_date} </p> 
+      <p>End Date: ${anime.end_date}</p>
+      <p>IMDB Rate : ${anime.score}</p>
+      <p>Type : ${anime.type}</p>
+      `;
+
+  const output = document.querySelector("#output");
+  output.append(searchResults);
+}
 
 //function to search Anime and fetch API
 async function getAnime(event) {
