@@ -95,4 +95,7 @@ form {
     font-size: 0.9rem;
     padding: 10px;
   }
+  #output {
+    gap: 2rem;
+  }
 }
